@@ -55,12 +55,12 @@ $(function() {
   };
   return controllersConnection(wsUri);
  
-  # Send messaje to server 
+  // Send messaje to server 
   $('selector').click(function() {
     return socket.send("message");
   });
 
-  # Throw alert when receive a message
+  // Throw alert when receive a message
   socket.onmessage = function(evt) {
     if (evt.data === 'message') {
       return alert(evt.data);
